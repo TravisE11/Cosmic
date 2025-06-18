@@ -278,4 +278,24 @@ public class MapId {
     public static final int CRIMSONWOOD_KEEP = 610020006;
     public static final int MU_LUNG_DOJO_HALL = 925020001;
     public static final int EXCLUSIVE_TRAINING_CENTER = 970030000;
+
+    // My own maps
+    public static final int SHARP_CLIFF_2 = 211040400;
+    public static final int GHOST_SHIP_2 = 541010010;
+    public static final int CHIEFS_RESIDENCE = 211000001;
+    public static final int WARRIORS_SANCTUARY = 102000003;
+    public static final int MAGIC_LIBRARY = 101000003;
+    public static final int BOWMAN_INSTRUCTIONAL_SCHOOL = 100000201;
+    public static final int THIEVES_HIDEOUT = 103000003;
+    public static final int NAVIGATION_ROOM = 120000101;
+    public static final int WEST_ROCKY_MOUNTAIN_4 = 102020300;
+    public static final int THE_FOREST_NORTH_OF_ELLINIA = 101020000;
+    public static final int THE_ROAD_TO_THE_DUNGEON = 106010000;
+    public static final int CONSTRUCTION_SITE_NORTH_OF_KERNING_CITY = 102040000;
+    public static final int ANT_TUNNEL_PARK = 105070001;
+    public static final int FOREST_OF_EVIL_2 = 100040106;
+    public static final int SLEEPY_DUNGEON_5 = 105040305;
+    public static final int MONKEY_SWAMP_2 = 107000402;
+    public static final int CAVE_OF_EVIL_EYE_2 = 105070200;
+    public static final int FOREST_OF_THE_PRIEST = 240010501;
 }

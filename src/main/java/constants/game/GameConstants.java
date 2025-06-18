@@ -90,6 +90,29 @@ public class GameConstants {
         put("square", MapId.KERNING_SQUARE);
         put("neo", MapId.NEO_CITY);
         put("mushking", MapId.MUSHROOM_KINGDOM);
+        put("sharpcliff2", MapId.SHARP_CLIFF_2);
+        put("gs2", MapId.GHOST_SHIP_2);
+
+        put("1stjobwarrior", MapId.WARRIORS_SANCTUARY);
+        put("1stjobmage", MapId.MAGIC_LIBRARY);
+        put("1stjobbowman", MapId.BOWMAN_INSTRUCTIONAL_SCHOOL);
+        put("1stjobthief", MapId.THIEVES_HIDEOUT);
+        put("1stjobpirate", MapId.NAVIGATION_ROOM);
+        put("2ndjobwarrior", MapId.WEST_ROCKY_MOUNTAIN_4);
+        put("2ndjobmage", MapId.THE_FOREST_NORTH_OF_ELLINIA);
+        put("2ndjobbowman", MapId.THE_ROAD_TO_THE_DUNGEON);
+        put("2ndjobthief", MapId.CONSTRUCTION_SITE_NORTH_OF_KERNING_CITY);
+        put("2ndjobpirate", MapId.NAVIGATION_ROOM);
+        put("3rdjobwarrior", MapId.ANT_TUNNEL_PARK);
+        put("3rdjobmage", MapId.FOREST_OF_EVIL_2);
+        put("3rdjobbowman", MapId.SLEEPY_DUNGEON_5);
+        put("3rdjobthief", MapId.MONKEY_SWAMP_2);
+        put("3rdjobpirate", MapId.CAVE_OF_EVIL_EYE_2);
+
+        put("3rdjob", MapId.CHIEFS_RESIDENCE);
+        put("4thjob", MapId.FOREST_OF_THE_PRIEST);
+        put("griffey", MapId.GRIFFEY_FOREST);
+        put("manon", MapId.MANONS_FOREST);
     }};
 
     // "goto" command for only-GMs

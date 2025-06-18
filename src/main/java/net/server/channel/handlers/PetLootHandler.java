@@ -28,8 +28,11 @@ import net.AbstractPacketHandler;
 import net.packet.InPacket;
 import server.maps.MapItem;
 import server.maps.MapObject;
+import server.maps.MapObjectType;
 import tools.PacketCreator;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -46,6 +49,11 @@ public final class PetLootHandler extends AbstractPacketHandler {
         if (pet == null || !pet.isSummoned()) {
             c.sendPacket(PacketCreator.enableActions());
             return;
+        }
+
+        List<MapObject> list = chr.getMap().getMapObjectsInRange(chr.getPosition(), Double.POSITIVE_INFINITY, Arrays.asList(MapObjectType.ITEM));
+        for (MapObject item : list) {
+            chr.pickupItem(item);
         }
 
         p.skip(13);

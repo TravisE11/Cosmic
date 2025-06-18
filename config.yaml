@@ -8,13 +8,13 @@ worlds:
     event_message: Scania!
     why_am_i_recommended: Welcome to Scania!
     channels: 3
-    exp_rate: 10
-    meso_rate: 10
+    exp_rate: 5000
+    meso_rate: 10000
     drop_rate: 10
-    boss_drop_rate: 10                      #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
-    quest_rate: 5                           #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
+    boss_drop_rate: 1                      #NOTE: Boss drop rate OVERRIDES common drop rate, for bosses-only.
+    quest_rate: 1                           #Multiplier for Exp & Meso gains when completing a quest. Only available when USE_QUEST_RATE is true. Stacks with server Exp & Meso rates.
     fishing_rate: 10                        #Multiplier for success likelihood on meso thrown during fishing.
-    travel_rate: 10                         #Means of transportation rides/departs using 1/N of the default time.
+    travel_rate: 1000                         #Means of transportation rides/departs using 1/N of the default time.
 
     #Properties for Bera 1
   - flag: 0
@@ -162,7 +162,7 @@ server:
     DB_URL_FORMAT: "jdbc:mysql://%s:3306/cosmic" # If the docker ENV for DB_HOST is anything but "db", this string format should be changed from 3306 to 3307 (or whichever port it was changed to in docker) 
     DB_HOST: "localhost" 
     DB_USER: "root"
-    DB_PASS: ""
+    DB_PASS: "travis"
     INIT_CONNECTION_POOL_TIMEOUT: 90    # Seconds
 
     #Login Configuration
@@ -172,14 +172,15 @@ server:
     CHANNEL_LOAD: 100                   #Max players per channel (limit actually used to calculate the World server capacity).
     CHANNEL_LOCKS: 20                   #Total number of structure management locks each channel has.
 
-    RESPAWN_INTERVAL: 10000             #10 seconds, 10000.
+    RESPAWN_INTERVAL: 1000             #1 second, 1000.
     PURGING_INTERVAL: 300000            #5 minutes, 300000.
     RANKING_INTERVAL: 3600000           #60 minutes, 3600000.
     COUPON_INTERVAL: 3600000            #60 minutes, 3600000.
     UPDATE_INTERVAL: 777                #Dictates the frequency on which the "centralized server time" is updated.
+    MOB_SPAWN_MULTIPLIER: 4             #Multiplies the number of each mob that spawns
 
-    ENABLE_PIC: true               #Pick true/false to enable or disable Pic. Delete character requires PIC available.
-    ENABLE_PIN: true               #Pick true/false to enable or disable Pin.
+    ENABLE_PIC: false               #Pick true/false to enable or disable Pic. Delete character requires PIC available.
+    ENABLE_PIN: false               #Pick true/false to enable or disable Pin.
 
     BYPASS_PIC_EXPIRATION: 20           #Enables PIC bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
     BYPASS_PIN_EXPIRATION: 15           #Enables PIN bypass, which will remain active for that account by that client machine for N minutes. Set 0 to disable.
@@ -227,12 +228,12 @@ server:
     USE_STORAGE_ITEM_SORT: true         #Enables storage "Arrange Items" feature.
     USE_ITEM_SORT: true                 #Enables inventory "Item Sort/Merge" feature.
     USE_ITEM_SORT_BY_NAME: false        #Item sorting based on name rather than id.
-    USE_PARTY_FOR_STARTERS: false        #Players level 10 or below can create/invite other players on the given level range.
+    USE_PARTY_FOR_STARTERS: true        #Players level 10 or below can create/invite other players on the given level range.
     USE_AUTOASSIGN_STARTERS_AP: true   #Beginners level 10 or below have their AP autoassigned (they can't choose to levelup a stat). Set true ONLY if the localhost doesn't support AP assigning for beginners level 10 or below.
     USE_AUTOASSIGN_SECONDARY_CAP: true  #Prevents AP autoassign from spending on secondary stats after the player class' cap (defined on the autoassign handler) has been reached.
     USE_STARTING_AP_4: false             #Use early-GMS 4/4/4/4 starting stats. To overcome AP shortage, this gives 4AP/5AP at 1st/2nd job advancements.
     USE_AUTOBAN: false                  #Commands the server to detect infractors automatically.
-    USE_AUTOBAN_LOG: true               #Log autoban related messages. Still logs even with USE_AUTOBAN disabled.
+    USE_AUTOBAN_LOG: false               #Log autoban related messages. Still logs even with USE_AUTOBAN disabled.
     USE_EXP_GAIN_LOG: false #Logs characters exp gains; logs world rate & coupon exp, total gained exp, and current exp, level can be calculated from "ExpTable".
     USE_AUTOSAVE: true                  #Enables server autosaving feature (saves characters to DB each 1 hour).
     USE_SERVER_AUTOASSIGNER: false       #HeavenMS-builtin autoassigner, uses algorithm based on distributing AP accordingly with required secondary stat on equipments.
@@ -240,7 +241,7 @@ server:
     USE_ENFORCE_ADMIN_ACCOUNT: false    #Forces accounts having GM characters to be treated as a "GM account" by the client (localhost). Some of the GM account perks is the ability to FLY, but unable to TRADE.
     USE_ENFORCE_NOVICE_EXPRATE: false    #Hardsets experience rate 1x for beginners level 10 or under. Ideal for roaming on novice areas without caring too much about losing some stats.
     USE_ENFORCE_HPMP_SWAP: false        #Forces players to reuse stats (via AP Resetting) located on HP/MP pool only inside the HP/MP stats.
-    USE_ENFORCE_MOB_LEVEL_RANGE: true   #Players N levels below the killed mob will gain no experience from defeating it.
+    USE_ENFORCE_MOB_LEVEL_RANGE: false   #Players N levels below the killed mob will gain no experience from defeating it.
     USE_ENFORCE_JOB_LEVEL_RANGE: false  #Caps the player level on the minimum required to advance their current jobs.
     USE_ENFORCE_JOB_SP_RANGE: false     #Caps the player SP level on the total obtainable by their current jobs. After changing jobs, missing SP will be retrieved.
     USE_ENFORCE_ITEM_SUGGESTION: false  #Forces the Owl of Minerva and the Cash Shop to always display the defined item array instead of those featured by the players.
@@ -254,9 +255,9 @@ server:
     USE_ERASE_UNTRADEABLE_DROP: true    #Forces flagged untradeable items to disappear when dropped.
     USE_ERASE_PET_ON_EXPIRATION: false  #Forces pets to be removed from inventory when expire time comes, rather than converting it to a doll.
     USE_BUFF_MOST_SIGNIFICANT: true     #When applying buffs, the player will stick with the highest stat boost among the listed, rather than overwriting stats.
-    USE_BUFF_EVERLASTING: false         #Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
+    USE_BUFF_EVERLASTING: true         #Every applied buff on players holds expiration time so high it'd be considered permanent. Suggestion thanks to Vcoc.
     USE_MULTIPLE_SAME_EQUIP_DROP: true  #Enables multiple drops by mobs of the same equipment, number of possible drops based on the quantities provided at the drop data.
-    USE_ENABLE_FULL_RESPAWN: false       #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
+    USE_ENABLE_FULL_RESPAWN: true       #At respawn task, always respawn missing mobs when they're available. Spawn count doesn't depend on how many players are currently there.
     USE_ENABLE_CHAT_LOG: false          #Write in-game chat to log
     USE_MAP_OWNERSHIP_SYSTEM: false      #Flag to enable/disable map ownership system
     USE_FISHING_SYSTEM: false            #Flag to enable/disable custom fishing system
@@ -271,7 +272,7 @@ server:
     #Announcement Configuration
     USE_ANNOUNCE_SHOPITEMSOLD: false    #Automatic message sent to owner when an item from the Player Shop or Hired Merchant is sold.
     USE_ANNOUNCE_CHANGEJOB: false       #Automatic message sent to acquantainces when changing jobs.
-    USE_ANNOUNCE_NX_COUPON_LOOT: false    #Enables or disables the floating text when a player loots a NX card
+    USE_ANNOUNCE_NX_COUPON_LOOT: true    #Enables or disables the floating text when a player loots a NX card
 
     #Cash Shop Configuration
     USE_JOINT_CASHSHOP_INVENTORY: false  #Enables usage of a same cash shop inventory for explorers, cygnus and legends. Items from exclusive cash shop inventories won't show up on the shared inventory, though.
@@ -294,8 +295,8 @@ server:
     EQUIP_EXP_RATE: 1.0                  #Rate for equipment exp gain, grows linearly. Set 1.0 for default (about 100~200 same-level range mobs killed to pass equip from level 1 to 2).
     PQ_BONUS_EXP_RATE: 0.5               #Rate for the PQ exp reward.
 
-    EXP_SPLIT_LEVEL_INTERVAL: 5            #Non-contributing players must be within N level between the mob to receive EXP.
-    EXP_SPLIT_LEECH_INTERVAL: 5            #Non-contributing players must be within N level between any contributing party member to receive EXP.
+    EXP_SPLIT_LEVEL_INTERVAL: 50            #Non-contributing players must be within N level between the mob to receive EXP.
+    EXP_SPLIT_LEECH_INTERVAL: 50            #Non-contributing players must be within N level between any contributing party member to receive EXP.
     EXP_SPLIT_MVP_MOD: 0.2
     EXP_SPLIT_COMMON_MOD: 0.8
     PARTY_BONUS_EXP_RATE: 1.0            #Rate for the party exp bonus reward.
@@ -324,7 +325,7 @@ server:
 
     #Map Monitor Configuration
     ITEM_EXPIRE_CHECK: 10000        # (10 * 10000) Interval between item expiring tasks on maps, which checks and makes disappear expired items.
-    ITEM_LIMIT_ON_MAP: 200              #Max number of items allowed on a map.
+    ITEM_LIMIT_ON_MAP: 400              #Max number of items allowed on a map.
     MAP_VISITED_SIZE: 5                 #Max length for last mapids visited by a player. This is used to recover and update drops on these maps accordingly with player actions.
     MAP_DAMAGE_OVERTIME_INTERVAL: 2500  #Interval in milliseconds between map environment damage (e.g. El Nath and Aqua Road surrondings).
     MAP_DAMAGE_OVERTIME_COUNT: 2
@@ -347,9 +348,9 @@ server:
     CHSCROLL_STAT_RANGE: 5              #Stat upgrade range (-N, N) on chaos scrolls.
 
     #Beginner Skills Configuration
-    USE_ULTRA_NIMBLE_FEET: false     #Massive speed & jump upgrade.
+    USE_ULTRA_NIMBLE_FEET: true     #Massive speed & jump upgrade.
     USE_ULTRA_RECOVERY: false        #Massive recovery amounts overtime.
-    USE_ULTRA_THREE_SNAILS: false    #Massive damage on shell toss.
+    USE_ULTRA_THREE_SNAILS: true    #Massive damage on shell toss.
 
     #Other Skills Configuration
     USE_FULL_ARAN_SKILLSET: false   #Enables starter availability to all Aran job skills. Suggestion thanks to Masterrulax.
@@ -416,11 +417,11 @@ server:
     PET_AUTOMP_RATIO: 0.99
 
     #Pet & Mount Configuration
-    PET_EXHAUST_COUNT: 3               #Number of proc counts (1 per minute) on the exhaust schedule for fullness.
-    MOUNT_EXHAUST_COUNT: 1             #Number of proc counts (1 per minute) on the exhaust schedule for tiredness.
+    PET_EXHAUST_COUNT: 0               #Number of proc counts (1 per minute) on the exhaust schedule for fullness.
+    MOUNT_EXHAUST_COUNT: 0             #Number of proc counts (1 per minute) on the exhaust schedule for tiredness.
 
     #Pet Hunger Configuration
-    PETS_NEVER_HUNGRY: false        #If true, pets and mounts will never grow hungry.
+    PETS_NEVER_HUNGRY: true        #If true, pets and mounts will never grow hungry.
     GM_PETS_NEVER_HUNGRY: true      #If true, pets and mounts owned by GMs will never grow hungry.
 
     #Event Configuration

@@ -24,6 +24,7 @@ public class ServerConfig {
     public long RANKING_INTERVAL;
     public long COUPON_INTERVAL;
     public long UPDATE_INTERVAL;
+    public long MOB_SPAWN_MULTIPLIER;
 
     public boolean ENABLE_PIC;
     public boolean ENABLE_PIN;

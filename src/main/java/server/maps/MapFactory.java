@@ -35,6 +35,7 @@ import server.life.PlayerNPC;
 import server.partyquest.GuardianSpawnPoint;
 import tools.DatabaseConnection;
 import tools.StringUtil;
+import config.YamlConfig;
 
 import java.awt.*;
 import java.sql.Connection;
@@ -120,7 +121,9 @@ public class MapFactory {
             if (mobTime == -1) { //does not respawn, force spawn once
                 map.spawnMonster(monster);
             } else {
-                map.addMonsterSpawn(monster, mobTime, team);
+                for (int i = 1; i <= YamlConfig.config.server.MOB_SPAWN_MULTIPLIER; i++) {
+                    map.addMonsterSpawn(monster, mobTime, team);
+                }
             }
 
             //should the map be reseted, use allMonsterSpawn list of monsters to spawn them again

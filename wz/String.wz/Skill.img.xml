@@ -55,121 +55,88 @@
   </imgdir>
   <imgdir name="1000000">
     <string name="name" value="Improved HP Recovery"/>
-    <string name="desc" value="[Master Level : 16]\nRecover additional HP every 10 sec. while standing still."/>
-    <string name="h1" value="Recover additional HP +3"/>
-    <string name="h2" value="Recover additional HP +6"/>
-    <string name="h3" value="Recover additional HP +9"/>
-    <string name="h4" value="Recover additional HP +12"/>
-    <string name="h5" value="Recover additional HP +15"/>
-    <string name="h6" value="Recover additional HP +18"/>
-    <string name="h7" value="Recover additional HP +21"/>
-    <string name="h8" value="Recover additional HP +24"/>
-    <string name="h9" value="Recover additional HP +27"/>
-    <string name="h10" value="Recover additional HP +30"/>
-    <string name="h11" value="Recover additional HP +33"/>
-    <string name="h12" value="Recover additional HP +36"/>
-    <string name="h13" value="Recover additional HP +39"/>
-    <string name="h14" value="Recover additional HP +42"/>
-    <string name="h15" value="Recover additional HP +45"/>
-    <string name="h16" value="Recover additional HP +50"/>
+    <string name="desc" value="[Master Level : 1]\nRecover additional HP every 10 sec. while standing still."/>
+    <string name="h1" value="Recover additional HP +240"/>
   </imgdir>
   <imgdir name="1000001">
     <string name="name" value="Improved MaxHP Increase"/>
-    <string name="desc" value="Master Level : 10] This skill boosts up the amount of increase on MaxHP after each Level UP, or AP used on MaxHP.\nRequired Skill : #cAt least Level 5 on Improving HP Recovery.#"/>
-    <string name="h1" value="If Level UP, +4 more; if AP applied, +3 more on top on MaxHP"/>
-    <string name="h2" value="If Level UP, +8 more; if AP applied, +6 more on top on MaxHP"/>
-    <string name="h3" value="If Level UP, +12 more; if AP applied, +9 more on top on MaxHP"/>
-    <string name="h4" value="If Level UP, +16 more; if AP applied, +12 more on top on MaxHP"/>
-    <string name="h5" value="If Level UP, +20 more; if AP applied, +15 more on top on MaxHP"/>
-    <string name="h6" value="If Level UP, +24 more; if AP applied, +18 more on top on MaxHP"/>
-    <string name="h7" value="If Level UP, +28 more; if AP applied, +21 more on top on MaxHP"/>
-    <string name="h8" value="If Level UP, +32 more; if AP applied, +24 more on top on MaxHP"/>
-    <string name="h9" value="If Level UP, +36 more; if AP applied, +27 more on top on MaxHP"/>
-    <string name="h10" value="If Level UP, +40 more; if AP applied, +30 more on top on MaxHP"/>
+    <string name="desc" value="Master Level : 1] This skill boosts up the amount of increase on MaxHP after each Level UP, or AP used on MaxHP.\nRequired Skill"/>
+    <string name="h1" value="If Level UP, +400 more; if AP applied, +300 more on top on MaxHP"/>
   </imgdir>
   <imgdir name="1000002">
     <string name="name" value="Endure"/>
-    <string name="desc" value="[Master Level : 8]\nEven when hanging on the rope or on a ladder, you&apos;ll be able to recover some HP after a certain amount of time.\nRequired Skill : #cAt least Level 3 on Improving MaxHP Increase.#"/>
-    <string name="h1" value="Recover HP every 31 sec."/>
-    <string name="h2" value="Recover HP every 28 sec."/>
-    <string name="h3" value="Recover HP every 25 sec."/>
-    <string name="h4" value="Recover HP every 22 sec."/>
-    <string name="h5" value="Recover HP every 19 sec."/>
-    <string name="h6" value="Recover HP every 16 sec."/>
-    <string name="h7" value="Recover HP every 13 sec."/>
-    <string name="h8" value="Recover HP every 10 sec."/>
+    <string name="desc" value="[Master Level : 1]\nEven when hanging on the rope or on a ladder, you&apos;ll be able to recover some HP after a certain amount of time."/>
+    <string name="h1" value="Recover HP every 10 sec."/>
   </imgdir>
   <imgdir name="1001003">
     <string name="name" value="Iron Body"/>
-    <string name="desc" value="[Master Level : 20]\nTemporarily increases your weapon defense.\nRequired Skill : #cAt least Level 3 on Endure#"/>
-    <string name="h1" value="MP -8; weapon def. +2 for 75 sec."/>
-    <string name="h2" value="MP -8; weapon def. +4 for 85 sec."/>
-    <string name="h3" value="MP -8; weapon def. +6 for 95 sec."/>
-    <string name="h4" value="MP -8; weapon def. +8 for 105 sec."/>
-    <string name="h5" value="MP -9; weapon def. +10 for 120 sec."/>
-    <string name="h6" value="MP -9; weapon def. +12 for 130 sec."/>
-    <string name="h7" value="MP -9; weapon def. +14 for 140 sec."/>
-    <string name="h8" value="MP -10; weapon def. +16 for 155 sec."/>
-    <string name="h9" value="MP -10; weapon def. +18 for 165 sec."/>
-    <string name="h10" value="MP -10; weapon def. +20 for 175 sec."/>
-    <string name="h11" value="MP -11; weapon def. +22 for 190 sec."/>
-    <string name="h12" value="MP -11; weapon def. +24 for 200 sec."/>
-    <string name="h13" value="MP -12; weapon def. +26 for 215 sec."/>
-    <string name="h14" value="MP -12; weapon def. +28 for 225 sec."/>
-    <string name="h15" value="MP -13; weapon def. +30 for 240 sec."/>
-    <string name="h16" value="MP -13; weapon def. +32 for 250 sec."/>
-    <string name="h17" value="MP -14; weapon def. +34 for 265 sec."/>
-    <string name="h18" value="MP -14; weapon def. +36 for 275 sec."/>
-    <string name="h19" value="MP -15; weapon def. +38 for 290 sec."/>
-    <string name="h20" value="MP -15; weapon def. +40 for 300 sec."/>
+    <string name="desc" value="[Master Level : 18]\nIncreases your weapon defense, speed, jump, and accuracy"/>
+    <string name="h1" value="MP -8; weapon def. +2, speed +3, jump +1, acc +2 for 100 sec."/>
+    <string name="h2" value="MP -8; weapon def. +40, speed +6, jump +2, acc +4 for 200 sec."/>
+    <string name="h3" value="MP -8; weapon def. +60, speed +9, jump +3, acc +6 for 300 sec."/>
+    <string name="h4" value="MP -8; weapon def. +80, speed +12, jump +4, acc +8 for 400 sec."/>
+    <string name="h5" value="MP -9; weapon def. +100, speed +15, jump +5, acc +10 for 500 sec."/>
+    <string name="h6" value="MP -9; weapon def. +120, speed +18, jump +6, acc +12 for 600 sec."/>
+    <string name="h7" value="MP -9; weapon def. +140, speed +21, jump +7, acc +14 for 700 sec."/>
+    <string name="h8" value="MP -10; weapon def. +160, speed +24, jump +8, acc +16 for 800 sec."/>
+    <string name="h9" value="MP -10; weapon def. +180, speed +27, jump +9, acc +18 for 900 sec."/>
+    <string name="h10" value="MP -10; weapon def. +200, speed +30, jump +10, acc +20 for 1000 sec."/>
+    <string name="h11" value="MP -11; weapon def. +220, speed +33, jump +11, acc +22 for 1100 sec."/>
+    <string name="h12" value="MP -11; weapon def. +240, speed +36, jump +12, acc +24 for 1200 sec."/>
+    <string name="h13" value="MP -12; weapon def. +260, speed +39, jump +13, acc +26 for 1300 sec."/>
+    <string name="h14" value="MP -12; weapon def. +280, speed +42, jump +14, acc +28 for 1400 sec."/>
+    <string name="h15" value="MP -13; weapon def. +300, speed +45, jump +15, acc +30 for 1500 sec."/>
+    <string name="h16" value="MP -13; weapon def. +320, speed +48, jump +16, acc +32 for 1600 sec."/>
+    <string name="h17" value="MP -14; weapon def. +340, speed +51, jump +17, acc +34 for 1700 sec."/>
+    <string name="h18" value="MP -14; weapon def. +360, speed +60, jump +23, acc +40 for 1800 sec."/>
   </imgdir>
   <imgdir name="1001004">
     <string name="name" value="Power Strike"/>
     <string name="desc" value="[Master Level : 20]\nUse MP to deliver a killer blow to the monsters with a sword."/>
-    <string name="h1" value="MP -4; sword damage 165%"/>
-    <string name="h2" value="MP -4; sword damage 170%"/>
-    <string name="h3" value="MP -4; sword damage 175%"/>
-    <string name="h4" value="MP -4; sword damage 180%"/>
-    <string name="h5" value="MP -5; sword damage 185%"/>
-    <string name="h6" value="MP -5; sword damage 190%"/>
-    <string name="h7" value="MP -5; sword damage 195%"/>
-    <string name="h8" value="MP -6; sword damage 200%"/>
-    <string name="h9" value="MP -6; sword damage 205%"/>
-    <string name="h10" value="MP -7; sword damage 210%"/>
-    <string name="h11" value="MP -7; sword damage 215%"/>
-    <string name="h12" value="MP -8; sword damage 220%"/>
-    <string name="h13" value="MP -8; sword damage 225%"/>
-    <string name="h14" value="MP -9; sword damage 230%"/>
-    <string name="h15" value="MP -9; sword damage 235%"/>
-    <string name="h16" value="MP -10; sword damage 240%"/>
-    <string name="h17" value="MP -10; sword damage 245%"/>
-    <string name="h18" value="MP -11; sword damage 250%"/>
-    <string name="h19" value="MP -11; sword damage 255%"/>
-    <string name="h20" value="MP -12; sword damage 260%"/>
+    <string name="h1" value="MP -4; sword damage 330%"/>
+    <string name="h2" value="MP -4; sword damage 340%"/>
+    <string name="h3" value="MP -4; sword damage 350%"/>
+    <string name="h4" value="MP -4; sword damage 360%"/>
+    <string name="h5" value="MP -5; sword damage 370%"/>
+    <string name="h6" value="MP -5; sword damage 380%"/>
+    <string name="h7" value="MP -5; sword damage 390%"/>
+    <string name="h8" value="MP -6; sword damage 400%"/>
+    <string name="h9" value="MP -6; sword damage 410%"/>
+    <string name="h10" value="MP -7; sword damage 420%"/>
+    <string name="h11" value="MP -7; sword damage 430%"/>
+    <string name="h12" value="MP -8; sword damage 440%"/>
+    <string name="h13" value="MP -8; sword damage 450%"/>
+    <string name="h14" value="MP -9; sword damage 460%"/>
+    <string name="h15" value="MP -9; sword damage 470%"/>
+    <string name="h16" value="MP -10; sword damage 480%"/>
+    <string name="h17" value="MP -10; sword damage 790%"/>
+    <string name="h18" value="MP -11; sword damage 500%"/>
+    <string name="h19" value="MP -11; sword damage 510%"/>
+    <string name="h20" value="MP -12; sword damage 520%"/>
   </imgdir>
   <imgdir name="1001005">
     <string name="name" value="Slash Blast"/>
-    <string name="desc" value="[Master Level : 20]\nUse HP and MP to attack every enemy around you with a sword.\nRequired Skill : #cAt least Level 1 on Power Strike#"/>
-    <string name="h1" value="HP -8, MP -6; damage 72%"/>
-    <string name="h2" value="HP -8, MP -6; damage 75%"/>
-    <string name="h3" value="HP -8, MP -6; damage 78%"/>
-    <string name="h4" value="HP -8, MP -6; damage 81%"/>
-    <string name="h5" value="HP -9, MP -7; damage 84%"/>
-    <string name="h6" value="HP -9, MP -7; damage 87%"/>
-    <string name="h7" value="HP -9, MP -7; damage 90%"/>
-    <string name="h8" value="HP -10, MP -8; damage 93%"/>
-    <string name="h9" value="HP -10, MP -8; damage 96%"/>
-    <string name="h10" value="HP -11, MP -9; damage 99%"/>
-    <string name="h11" value="HP -11, MP -9; damage 102%"/>
-    <string name="h12" value="HP -12, MP -10; damage 105%"/>
-    <string name="h13" value="HP -12, MP -10; damage 108%"/>
-    <string name="h14" value="HP -13, MP -11; damage 111%"/>
-    <string name="h15" value="HP -13, MP -11; damage 114%"/>
-    <string name="h16" value="HP -14, MP -12; damage 117%"/>
-    <string name="h17" value="HP -14, MP -12; damage 120%"/>
-    <string name="h18" value="HP -15, MP -13; damage 123%"/>
-    <string name="h19" value="HP -15, MP -13; damage 126%"/>
-    <string name="h20" value="HP -16, MP -14; damage 130%"/>
+    <string name="desc" value="[Master Level : 20]\nUse HP and MP to attack every enemy around you with a sword."/>
+    <string name="h1" value="HP -8, MP -6; 6 mobs, 300% range, damage 144%"/>
+    <string name="h2" value="HP -8, MP -6; 6 mobs, 300% range, damage 150%"/>
+    <string name="h3" value="HP -8, MP -6; 6 mobs, 300% range, damage 156%"/>
+    <string name="h4" value="HP -8, MP -6; 6 mobs, 300% range, damage 162%"/>
+    <string name="h5" value="HP -9, MP -7; 7 mobs, 300% range, damage 168%"/>
+    <string name="h6" value="HP -9, MP -7; 7 mobs, 300% range, damage 174%"/>
+    <string name="h7" value="HP -9, MP -7; 7 mobs, 300% range, damage 180%"/>
+    <string name="h8" value="HP -10, MP -8; 8 mobs, 300% range, damage 186%"/>
+    <string name="h9" value="HP -10, MP -8; 8 mobs, 300% range, damage 192%"/>
+    <string name="h10" value="HP -11, MP -9; 8 mobs, 300% range, damage 198%"/>
+    <string name="h11" value="HP -11, MP -9; 9 mobs, 300% range, damage 204%"/>
+    <string name="h12" value="HP -12, MP -10; 9 mobs, 300% range, damage 210%"/>
+    <string name="h13" value="HP -12, MP -10; 9 mobs, 300% range, damage 216%"/>
+    <string name="h14" value="HP -13, MP -11; 10 mobs, 300% range, damage 222%"/>
+    <string name="h15" value="HP -13, MP -11; 10 mobs, 300% range, damage 228%"/>
+    <string name="h16" value="HP -14, MP -12; 10 mobs, 300% range, damage 234%"/>
+    <string name="h17" value="HP -14, MP -12; 11 mobs, 300% range, damage 240%"/>
+    <string name="h18" value="HP -15, MP -13; 11 mobs, 300% range, damage 246%"/>
+    <string name="h19" value="HP -15, MP -13; 11 mobs, 300% range, damage 152%"/>
+    <string name="h20" value="HP -16, MP -14; 12 mobs, 300% range, damage 260%"/>
   </imgdir>
   <imgdir name="200">
     <string name="bookName" value="Intro. to Magic"/>
